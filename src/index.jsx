@@ -5,19 +5,10 @@ import { AppContainer } from "react-hot-loader";
 
 import App from "./components/App";
 
-const render = (Component) => {
+
   ReactDOM.render(
-    <AppContainer>
+    <BrowserRouter>
       <App/>
-    </AppContainer>,
+    </BrowserRouter>,
     document.getElementById("react-app-root")
   );
-};
-
-render(App);
-
-if (module.hot) {
-  module.hot.accept("./components/App", () => {
-    render(App);
-  });
-}

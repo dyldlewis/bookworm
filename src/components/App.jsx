@@ -1,12 +1,14 @@
 import React from "react";
+import { Route } from "react-router-dom";
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
 
-function App(props){
-  return (
+const App = (props) => (
     <div>
-      <h3>Get to Coding!</h3>
-      <p><em>Template provided by The Dylan Lewis</em></p>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/login" exact component={LoginPage} />
     </div>
-  );
-}
+);
+
 
 export default App;
